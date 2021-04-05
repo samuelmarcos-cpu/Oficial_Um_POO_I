@@ -1,10 +1,24 @@
 class Main {
-  public static void main(String[] args) {
-    System.out.println("--- construtor ---");
-    Pessoa meuNome = new Pessoa("Marcos", "Samuel");
-    System.out.println(meuNome);
-    System.out.println(meuNome.getClass());
+  public static void printClass(Object obj, String titulo) {
+    System.out.println("--- " + titulo + " ---");
+    System.out.println(obj);
+    System.out.println(obj.getClass());
     System.out.println();
+  }
+
+  public static void printSalario(Funcionario func) {
+    System.out.println("--- salario ---");
+
+    System.out.println("primeira parcela: " + func.getSalarioPrimeiraParcela());
+
+    System.out.println("segunda  parcela: " + func.getSalarioSegundaParcela());
+
+    System.out.println();
+  }
+
+  public static void main(String[] args) {
+    Pessoa meuNome = new Pessoa("Marcos", "Samuel");
+    printClass(meuNome, "Eu");
 
     System.out.println("--- set nome ---");
     meuNome.setNome("Samuel");
@@ -26,5 +40,27 @@ class Main {
     Pessoa semNome = new Pessoa();
     System.out.println(semNome);
     System.out.println();
+
+    Funcionario zelador = new Funcionario(1, "Zelador", "Nervozo", 100);
+    printClass(zelador, "Funcionario");
+
+    printSalario(zelador);
+
+    System.out.println("--- set salario 50 ---");
+    zelador.setSalario(50);
+    System.out.println();
+
+    printSalario(zelador);
+
+    Professor prof = new Professor(1, "Fabrício", "Valadares", 100);
+    printClass(prof, "Professor");
+
+    printSalario(zelador);
+
+    System.out.println("--- set salario 50 ---");
+    zelador.setSalario(1000000);
+    System.out.println();
+
+    printSalario(zelador);
   }
 }

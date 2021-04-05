@@ -11,10 +11,6 @@ class Funcionario extends Pessoa {
     setSalario(salario);
   }
 
-  public Funcionario() {
-    this(0, "_", "_", 0);
-  }
-
   public void setMatricula(int matricula) {
     this.matricula = matricula;
   }
@@ -24,6 +20,10 @@ class Funcionario extends Pessoa {
   }
 
   public void setSalario(double salario) {
+    if (salario < 0) {
+      salario = 0;
+    }
+
     this.salario = salario;
   }
 
@@ -41,5 +41,9 @@ class Funcionario extends Pessoa {
 
   public double getSalarioSegundaParcela() {
     return calcPorc(Funcionario.PORC2PAR, getSalario());
+  }
+
+  public String toString() {
+    return "Matricula: " + getMatricula() + "\nNome: " + super.toString() + "\nSalario: " + getSalario();
   }
 }

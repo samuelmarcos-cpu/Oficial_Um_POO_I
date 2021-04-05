@@ -3,10 +3,6 @@ class Professor extends Funcionario {
     super(matricula, nome, sobrenome, salario);
   }
 
-  public Professor() {
-    this(0, "_", "_", 0);
-  }
-
   public double getSalarioPrimeiraParcela() {
     return getSalario();
   }
