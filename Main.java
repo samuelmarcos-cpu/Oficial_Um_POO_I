@@ -3,6 +3,7 @@ class Main {
     System.out.println("--- construtor ---");
     Pessoa meuNome = new Pessoa("Marcos", "Samuel");
     System.out.println(meuNome);
+    System.out.println(meuNome.getClass());
     System.out.println();
 
     System.out.println("--- set nome ---");
