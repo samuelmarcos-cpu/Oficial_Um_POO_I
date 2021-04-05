@@ -51,3 +51,5 @@ pertence, obtendo esta informação por intermédio do método getClass() da cla
 * Boas práticas de desenvolvimento orientado a objetos foram seguidas?
 * Código limpo e organizado?
 * Bem documentado?
+
+![DIAGRAMA](diagrama.png)
